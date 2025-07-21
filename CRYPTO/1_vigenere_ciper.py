@@ -1,5 +1,4 @@
-# Program to demonstrate cryptanalysis of shift cipher
-
+# Aim: Program to implement following classical Ciper  -  vigenere ciper 
 import math 
 def encrypt_words(pt,key):
     ct=  ""
