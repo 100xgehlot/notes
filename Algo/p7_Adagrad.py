@@ -1,3 +1,13 @@
+# Imp: Verify code is right or not before running
+from numpy.random import rand
+# gradient descent optimization with adagrad for a two-dimensional test function
+from math import sqrt
+from numpy import asarray
+from numpy.random import rand
+from numpy.random import seed
+# define the total iterations
+n_iter = 50
+step_size = 0.1
 # objective function
 def objective(x, y):
 	return x**2.0 + y**2.0
@@ -22,7 +32,7 @@ x, y = meshgrid(xaxis, yaxis)
 results = objective(x, y)
 # create a surface plot with the jet color scheme
 figure = pyplot.figure()
-axis = figure.gca(projection='3d')
+axis = figure.add_subplot(111, projection='3d')
 axis.plot_surface(x, y, results, cmap='jet')
 # show the plot
 pyplot.show()
@@ -135,11 +145,7 @@ best, score = adagrad(objective, derivative, bounds, n_iter, step_size)
 print('Done!')
 print('f(%s) = %f' % (best, score))
 
-# gradient descent optimization with adagrad for a two-dimensional test function
-from math import sqrt
-from numpy import asarray
-from numpy.random import rand
-from numpy.random import seed
+
 
 # objective function
 def objective(x, y):
