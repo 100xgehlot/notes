@@ -31,3 +31,4 @@ encrypt_file("input.txt","encrypted.bin",key,iv)
 print("File encrypted and saved ")
 decrypt_file("encrypted.bin","dec.txt",key,iv)
 print("file decrypted and saved")
+
